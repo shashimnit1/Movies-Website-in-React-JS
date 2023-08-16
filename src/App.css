@@ -1,38 +1,149 @@
-.App {
+.CardArea {
+  
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0pt;
+  padding: 0pt;
+  gap: 15pt;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA3rFRLMxSP1-n8c1KBrb3-tpnAhCpwKqlPkuD54jrz3wUBT7bd5SmZ_ZALpjNuTGEV94&usqp=CAU");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.CardBody {
+  padding: 0pt;
+  margin: 0pt;
+  width: 18vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  
+  box-shadow: 0pt 0pt 2pt red;
+  justify-content: space-around;
+  background-color: aquamarine;
+  transition: transform .3s;
+  position: relative;
+}
+
+.CardBody:hover {
+  transform: scale(1.08);
+  box-shadow: 0pt 0pt 10pt red;
+}
+
+.CardBody:hover .OverLay {
+  opacity: 1;
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.OverLay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.0001;
+  transition: .5s ease;
+  background-color: #222323;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: aliceblue;
+}
+
+img {
+  width: 18vw;
+  height: 50vh;
+  //opacity: 50%;
+}
+
+.TitleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  height: fit-content;
+  font-size: 30px;
+  margin: 0pt;
+  padding: 0pt;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  text-shadow: 0pt 0pt 4pt rgb(251, 247, 247);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.origin {
+  margin: 5pt;
+  padding: 0pt;
+}
+
+.details {
+  //border: 2pt solid rgb(217, 21, 21);
+  padding: 0pt;
+  margin: 0pt;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.center {
+  //border: 2pt solid black;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:link {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ButtonGroup {
+  width: 100%;
+  height: fit-content;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  //flex-wrap: wrap;
+  justify-content: space-around;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #100f0f;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-size: .9em;
+  margin: 0px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  background-image: linear-gradient(#0dccea, #f04115);
+  font-weight: bold;
 }

@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useState } from 'react'
+import Titlebar from './Titlebar';
+import Data from "./Data";
+import Card from './Card';
+const App = () => {
+  const [AllCards, setAllCards] = useState(Data)
+  console.log(AllCards)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Titlebar title="Best Movies/Webseries in React-JS" />
+      <div className='CardArea'>
+        
+        {
+          AllCards.map(
+            (CurrentElement, Index) => {
+              return (
+                <Card 
+                  key={Index}
+                  title={CurrentElement.title}
+                  details={CurrentElement.details}
+                  imgsrc={CurrentElement.imgsrc}
+                  origin={CurrentElement.origin}
+                  
+                />
+                
+              );
+            }
+          )
+        }
+
+      </div>
+    </>
   );
 }
 
-export default App;
+export default App
