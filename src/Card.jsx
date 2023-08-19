@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 const Card = (Props) => {
+    const [likeValue, setLike] = useState('like')
+    function likeOp() {
+        return (setLike("Liked"));
+    }
+
     return (
         <>
             <div className='CardBody'>
@@ -12,8 +18,14 @@ const Card = (Props) => {
                     </div>
                     <p className='details'>{Props.details}</p>
                     <div className='ButtonGroup'>
-                        <button>Watch Now</button>
-                        <button>Add to favourite</button>
+                        <button >Watch Now</button>
+                        {/* <button style={{ Color: "transparent" }}>
+                            <FavoriteIcon style={{ width: "3rem", height: "3rem", Color: "pink" }} />
+                        </button> */}
+                        <button id="like" onClick={likeOp}>
+                            <i class="fa fa-thumbs-up"></i>
+                            <span class="icon">{likeValue}</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -23,25 +35,6 @@ const Card = (Props) => {
 
 
 
-const Demo=()=>{
-    return (
-        <>
-            <div className='CardBody'>
-                <img src="https://m.media-amazon.com/images/I/41ThYzbpUcL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg" alt='Movie'></img>
-                <div className='OverLay'>
-                    <div className='TitleBox'>
-                        <p className='origin'>Netflix Presents</p>
-                        <p className='title'>Black Mirror</p>
-                    </div>
-                    <p className='details'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto vel et id ut facilis aut possimus o</p>
-                    <div className='ButtonGroup'>
-                        <button>Watch Now</button>
-                        <button>Add to favourite</button>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+
 
 export default Card

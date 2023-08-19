@@ -1,29 +1,84 @@
+html{
+  font-size: 62.5%;
+}
+/* Smallest Devices */
+@media screen and (max-width: 57.5rem) {
+  html {
+    font-size: 30%;
+  }
+  .CardBody{
+    width: auto;
+    height: 20rem;
+  }
+}
+
+/* Small devices (landscape phones, 57.6rem and up) */
+@media screen and (min-width: 57.6rem) {
+  html {
+    font-size: 48%;
+  }
+  .CardBody{
+    width: auto;
+    height: 20rem;
+  }
+
+}
+/* Medium devices (tablets, 76.8rem and up) */
+@media screen and (min-width: 76.8rem) {
+  html {
+    font-size: 64%;
+  }
+  .CardBody{
+    width: auto;
+    height: 20rem;
+  }
+}
+/* Large devices (desktops, 99.2rem and up) */
+@media screen and (min-width: 99.2rem) {
+  html {
+    font-size: 82.66%;
+  }
+  .CardBody{
+    width: auto;
+    height: auto;
+  }
+
+}
+/* Extra large devices (large desktops, 120.0rem and up) */
+@media (min-width: 120.0rem) {
+  html {
+    font-size: 100%;
+  }
+}
+
 .CardArea {
   
+
   width: 100%;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin: 0pt;
-  padding: 0pt;
-  gap: 15pt;
+  margin: 0rem;
+  padding: 0rem;
+  gap: 1.5rem;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA3rFRLMxSP1-n8c1KBrb3-tpnAhCpwKqlPkuD54jrz3wUBT7bd5SmZ_ZALpjNuTGEV94&usqp=CAU");
   background-size: cover;
   background-attachment: fixed;
 }
 
 .CardBody {
-  padding: 0pt;
-  margin: 0pt;
-  width: 18vw;
+  padding: 0rem;
+  margin: 0rem;
+  margin-top: 1rem;
+  width: 17rem;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  
-  box-shadow: 0pt 0pt 2pt red;
+
+  box-shadow: 0rem 0rem .2rem red;
   justify-content: space-around;
   background-color: aquamarine;
   transition: transform .3s;
@@ -32,7 +87,7 @@
 
 .CardBody:hover {
   transform: scale(1.08);
-  box-shadow: 0pt 0pt 10pt red;
+  box-shadow: 0rem 0rem 1.0rem red;
 }
 
 .CardBody:hover .OverLay {
@@ -41,6 +96,8 @@
 }
 
 .OverLay {
+  opacity: 0.0001;
+  transition: .5s ease;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -48,8 +105,8 @@
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.0001;
-  transition: .5s ease;
+  
+  
   background-color: #222323;
   display: flex;
   flex-direction: column;
@@ -59,8 +116,8 @@
 }
 
 img {
-  width: 18vw;
-  height: 50vh;
+  width: 17rem;
+  height: 26rem;
   //opacity: 50%;
 }
 
@@ -73,13 +130,12 @@ img {
 
 .title {
   width: 100%;
-  height: fit-content;
-  font-size: 30px;
-  margin: 0pt;
-  padding: 0pt;
+  font-size: 2.0rem;
+  margin: 0rem;
+  padding: 0rem;
   font-family: 'Oswald', sans-serif;
   color: white;
-  text-shadow: 0pt 0pt 4pt rgb(251, 247, 247);
+  text-shadow: 0rem 0rem .4rem rgb(251, 247, 247);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -89,14 +145,14 @@ img {
 }
 
 .origin {
-  margin: 5pt;
-  padding: 0pt;
+  margin: .5rem;
+  padding: 0rem;
 }
 
 .details {
-  //border: 2pt solid rgb(217, 21, 21);
-  padding: 0pt;
-  margin: 0pt;
+  //border: .2rem solid rgb(217, 21, 21);
+  padding: 0rem;
+  margin: 0rem;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -105,7 +161,7 @@ img {
 }
 
 .center {
-  //border: 2pt solid black;
+  //border: .2rem solid black;
   text-align: center;
 }
 
@@ -127,15 +183,15 @@ a:link {
 
 button {
   border: 0;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  border-radius: .4rem;
+  box-shadow: rgba(0, 0, 0, .3) 0 .5rem .15rem;
   box-sizing: border-box;
   color: #100f0f;
   cursor: pointer;
   font-family: Montserrat, sans-serif;
-  font-size: .9em;
-  margin: 0px;
-  padding: 10px 15px;
+  font-size: .9rem;
+  margin: 0rem;
+  padding: 1.0rem 1.5rem;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;

@@ -4,25 +4,25 @@ import Data from "./Data";
 import Card from './Card';
 const App = () => {
   const [AllCards, setAllCards] = useState(Data)
-  console.log(AllCards)
+ 
   return (
     <>
       <Titlebar title="Best Movies/Webseries in React-JS" />
       <div className='CardArea'>
-        
+
         {
           AllCards.map(
             (CurrentElement, Index) => {
               return (
-                <Card 
+                <Card
                   key={Index}
                   title={CurrentElement.title}
                   details={CurrentElement.details}
                   imgsrc={CurrentElement.imgsrc}
                   origin={CurrentElement.origin}
-                  
+
                 />
-                
+
               );
             }
           )
