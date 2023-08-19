@@ -7,7 +7,7 @@ const App = () => {
  
   return (
     <>
-      <Titlebar title="Best Movies/Webseries in React-JS" />
+      <Titlebar title="Best Movies / Webseries in React-JS" />
       <div className='CardArea'>
 
         {
